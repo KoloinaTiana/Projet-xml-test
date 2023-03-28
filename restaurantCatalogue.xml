@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurantCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.example.com/restaurantCatalogue file:/C:/Users/Koloina%20Tiana/Documents/Projet%20XML/restaurantCatalogue.xsd"
+ xmlns="http://www.example.com/restaurantCatalogue">
+    
+    <plat id="1">
+        <nom>Steak de boeuf</nom>
+        <description>Un steak de boeuf grillé accompagné de légumes frais.</description>
+        <prix>25.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Bœuf</ingredient>
+            <ingredient>Pommes de terre</ingredient>
+            <ingredient>Carottes</ingredient>
+            <ingredient>Brocoli</ingredient>
+            <ingredient>Sauce béarnaise</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="2">
+        <nom>Salade César</nom>
+        <description>Une salade verte avec du poulet grillé, du parmesan râpé et une sauce césar.</description>
+        <prix>12.99</prix>
+        <categorie>Entrée</categorie>
+        <ingredients>
+            <ingredient>Laitue romaine</ingredient>
+            <ingredient>Poulet grillé</ingredient>
+            <ingredient>Tomates cerises</ingredient>
+            <ingredient>Croutons</ingredient>
+            <ingredient>Sauce césar</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="3">
+        <nom>Pizza Margherita</nom>
+        <description>Une pizza garnie de tomates, de mozzarella fraîche et de basilic.</description>
+        <prix>15.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Pâte à pizza</ingredient>
+            <ingredient>Sauce tomate</ingredient>
+            <ingredient>Mozzarella</ingredient>
+            <ingredient>Basilic</ingredient>
+            <ingredient>Tomates cerises</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="4">
+        <nom>Soupe de poisson</nom>
+        <description>Une soupe de poisson avec des légumes frais et des croûtons.</description>
+        <prix>8.99</prix>
+        <categorie>Entrée</categorie>
+        <ingredients>
+            <ingredient>Poisson blanc</ingredient>
+            <ingredient>Légumes frais</ingredient>
+            <ingredient>Croûtons</ingredient>
+            <ingredient>Bouillon de légumes</ingredient>
+            <ingredient>Herbes de Provence</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="5">
+        <nom>Poulet Tandoori</nom>
+        <description>Cuisse de poulet marinée aux épices Tandoori et grillée, accompagnée de riz basmati</description>
+        <prix>16.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Cuisse de poulet</ingredient>
+            <ingredient>Yaourt</ingredient>
+            <ingredient>Épices Tandoori</ingredient>
+            <ingredient>Riz basmati</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="6">
+        <nom>Lasagne végétarienne</nom>
+        <description>Lasagne aux légumes grillés, sauce tomate maison et fromage gratiné</description>
+        <prix>14.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Pâtes à lasagne</ingredient>
+            <ingredient>Aubergine</ingredient>
+            <ingredient>Courgette</ingredient>
+            <ingredient>Poivron rouge</ingredient>
+            <ingredient>Sauce tomate maison</ingredient>
+            <ingredient>Fromage gratiné</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="7">
+        <nom>Salade Niçoise</nom>
+        <description>Salade verte, thon, œuf dur, haricots verts, tomates, poivrons et olives</description>
+        <prix>10.99</prix>
+        <categorie>Entrée</categorie>
+        <ingredients>
+            <ingredient>Salade verte</ingredient>
+            <ingredient>Thon</ingredient>
+            <ingredient>Œuf dur</ingredient>
+            <ingredient>Haricots verts</ingredient>
+            <ingredient>Tomates</ingredient>
+            <ingredient>Poivrons</ingredient>
+            <ingredient>Olives</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="8">
+        <nom>Bœuf bourguignon</nom>
+        <description>Bœuf mijoté au vin rouge, carottes, oignons et champignons, accompagné de pommes de terre vapeur</description>
+        <prix>18.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Viande de bœuf</ingredient>
+            <ingredient>Vin rouge</ingredient>
+            <ingredient>Carottes</ingredient>
+            <ingredient>Oignons</ingredient>
+            <ingredient>Champignons</ingredient>
+            <ingredient>Pommes de terre</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="9">
+        <nom>Moules marinières</nom>
+        <description>Moules cuites dans un bouillon de vin blanc, échalotes et persil, accompagnées de frites maison</description>
+        <prix>15.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Moules</ingredient>
+            <ingredient>Vin blanc</ingredient>
+            <ingredient>Échalotes</ingredient>
+            <ingredient>Persil</ingredient>
+            <ingredient>Pommes de terre</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="10">
+        <nom>Pad Thaï aux crevettes</nom>
+        <description>Nouilles de riz sautées, crevettes, oeuf, arachides, citron vert et sauce aigre-douce</description>
+        <prix>14.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Nouilles de riz</ingredient>
+            <ingredient>Crevettes</ingredient>
+            <ingredient>Oeuf</ingredient>
+            <ingredient>Arachides</ingredient>
+            <ingredient>Citron vert</ingredient>
+            <ingredient>Sauce aigre-douce</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="11">
+        <nom>Moules marinières</nom>
+        <description>Moules cuites dans un bouillon de vin blanc, oignon, persil et beurre</description>
+        <prix>10.99</prix>
+        <categorie>Entrée</categorie>
+        <ingredients>
+            <ingredient>Moules</ingredient>
+            <ingredient>Vin blanc</ingredient>
+            <ingredient>Oignon</ingredient>
+            <ingredient>Persil</ingredient>
+            <ingredient>Beurre</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="12">
+        <nom>Risotto aux champignons sauvages</nom>
+        <description>Riz arborio, champignons sauvages, échalote, bouillon de légumes, parmesan et crème fraîche</description>
+        <prix>15.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Riz arborio</ingredient>
+            <ingredient>Champignons sauvages</ingredient>
+            <ingredient>Echalote</ingredient>
+            <ingredient>Bouillon de légumes</ingredient>
+            <ingredient>Parmesan</ingredient>
+            <ingredient>Crème fraîche</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="13">
+        <nom>Sashimi de saumon</nom>
+        <description>Fines tranches de saumon frais, sauce soja, wasabi et gingembre mariné</description>
+        <prix>16.99</prix>
+        <categorie>Entrée</categorie>
+        <ingredients>
+            <ingredient>Saumon frais</ingredient>
+            <ingredient>Sauce soja</ingredient>
+            <ingredient>Wasabi</ingredient>
+            <ingredient>Gingembre mariné</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="14">
+        <nom>Escalope milanaise</nom>
+        <description>Escalope de veau panée, spaghetti à la tomate et salade verte</description>
+        <prix>17.99</prix>
+        <categorie>Plat principal</categorie>
+        <ingredients>
+            <ingredient>Escalope de veau</ingredient>
+            <ingredient>Chapelure</ingredient>
+            <ingredient>Parmesan</ingredient>
+            <ingredient>Oeuf</ingredient>
+            <ingredient>Spaghetti</ingredient>
+            <ingredient>Tomate</ingredient>
+            <ingredient>Salade verte</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="15">
+        <nom>Smoothie aux fruits exotiques</nom>
+        <description>Smoothie aux fruits de la passion, mangue, ananas, banane, yaourt et lait de coco</description>
+        <prix>7.99</prix>
+        <categorie>Boisson</categorie>
+        <ingredients>
+            <ingredient>Fruits de la passion</ingredient>
+            <ingredient>Mangue</ingredient>
+            <ingredient>Ananas</ingredient>
+            <ingredient>Banane</ingredient>
+            <ingredient>Yaourt</ingredient>
+            <ingredient>Lait de coco</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="16">
+        <nom>Thé glacé à la menthe</nom>
+        <description>Thé vert glacé à la menthe, citron, sucre et glaçons</description>
+        <prix>4.99</prix>
+        <categorie>Boisson</categorie>
+        <ingredients>
+            <ingredient>Thé vert</ingredient>
+            <ingredient>Menthe</ingredient>
+            <ingredient>Citron</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Glaçons</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="17">
+        <nom>Lait frappé à la fraise</nom>
+        <description>Lait frappé à la fraise, vanille, sucre et chantilly</description>
+        <prix>6.99</prix>
+        <categorie>Boisson</categorie>
+        <ingredients>
+            <ingredient>Fraises</ingredient>
+            <ingredient>Lait</ingredient>
+            <ingredient>Extrait de vanille</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Chantilly</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="18">
+        <nom>Sirop de grenadine</nom>
+        <description>Sirop de grenadine maison à base de grenade, sucre et eau</description>
+        <prix>3.99</prix>
+        <categorie>Boisson</categorie>
+        <ingredients>
+            <ingredient>Grenade</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Eau</ingredient>
+            <ingredient>Jus de citron</ingredient>
+            <ingredient>Extrait de vanille</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="19">
+        <nom>Café viennois</nom>
+        <description>Café noir, lait chaud, chocolat noir râpé et chantilly</description>
+        <prix>4.99</prix>
+        <categorie>Boisson</categorie>
+        <ingredients>
+            <ingredient>Café noir</ingredient>
+            <ingredient>Lait</ingredient>
+            <ingredient>Chocolat noir râpé</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Chantilly</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="20">
+        <nom>Mousse au chocolat</nom>
+        <description>Mousse au chocolat noir, oeufs, sucre et crème fouettée</description>
+        <prix>5.99</prix>
+        <categorie>Dessert</categorie>
+        <ingredients>
+            <ingredient>Chocolat noir</ingredient>
+            <ingredient>Oeufs</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Crème fouettée</ingredient>
+            <ingredient>Sel</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="21">
+        <nom>Panna cotta à la vanille</nom>
+        <description>Panna cotta à la vanille, crème liquide, lait, sucre et gélatine</description>
+        <prix>6.99</prix>
+        <categorie>Dessert</categorie>
+        <ingredients>
+            <ingredient>Crème liquide</ingredient>
+            <ingredient>Lait</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Gélatine</ingredient>
+            <ingredient>Extrait de vanille</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="22">
+        <nom>Tarte aux fruits rouges</nom>
+        <description>Tarte aux fruits rouges, pâte sablée, crème pâtissière et fruits rouges</description>
+        <prix>8.99</prix>
+        <categorie>Dessert</categorie>
+        <ingredients>
+            <ingredient>Pâte sablée</ingredient>
+            <ingredient>Crème pâtissière</ingredient>
+            <ingredient>Fruits rouges</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Beurre</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="23">
+        <nom>Cheesecake aux framboises</nom>
+        <description>Cheesecake aux framboises, biscuit sablé, cream cheese, sucre et framboises</description>
+        <prix>9.99</prix>
+        <categorie>Dessert</categorie>
+        <ingredients>
+            <ingredient>Biscuit sablé</ingredient>
+            <ingredient>Cream cheese</ingredient>
+            <ingredient>Framboises</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Beurre</ingredient>
+        </ingredients>
+    </plat>
+    
+    <plat id="24">
+        <nom>Crumble aux pommes</nom>
+        <description>Crumble aux pommes, pommes, sucre, farine, beurre et cannelle</description>
+        <prix>7.99</prix>
+        <categorie>Dessert</categorie>
+        <ingredients>
+            <ingredient>Pommes</ingredient>
+            <ingredient>Sucre</ingredient>
+            <ingredient>Farine</ingredient>
+            <ingredient>Beurre</ingredient>
+            <ingredient>Cannelle</ingredient>
+        </ingredients>
+    </plat>
+    
+</restaurantCatalogue>
+

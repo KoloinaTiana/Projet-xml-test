@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.example.com/restaurantCatalogue"
+    targetNamespace="http://www.example.com/restaurantCatalogue"
+    elementFormDefault="qualified">
+    
+    <xs:element name="restaurantCatalogue">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="plat" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="xs:string"/>
+                            <xs:element name="description" type="xs:string"/>
+                            <xs:element name="prix" type="xs:decimal"/>
+                            <xs:element name="categorie">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Entrée"/>
+                                        <xs:enumeration value="Plat principal"/>
+                                        <xs:enumeration value="Dessert"/>
+                                        <xs:enumeration value="Boisson"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ingredients">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingredient" maxOccurs="unbounded" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
