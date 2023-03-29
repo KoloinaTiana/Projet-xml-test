@@ -1,7 +1,12 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "jdom-2.0.6.1.jar",
-        "jaxen-2.0.0.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "jdom-2.0.6.1.jar",
+            "jaxen-2.0.0.jar"
+        ],
+        "exclude": [
+            "commons-collections4-4.4.jar"
+        ]
+    }
 }

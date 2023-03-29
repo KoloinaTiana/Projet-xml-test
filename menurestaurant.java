@@ -1,14 +1,10 @@
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -51,16 +47,19 @@ public class menurestaurant extends JFrame {
         searchButton.addActionListener(e -> {
             String searchTerm = queryField.getText().trim();
             if (searchTerm.isEmpty()) {
-                loadCatalogueData();
+                model = new MenuTableModel(data);
+                table.setModel(model);
             } else {
                 if ("XPath".equals(methodList.getSelectedItem())) {
                     try {
                         XmlUtils u = new XmlUtils();
                         List<org.jdom2.Element> elements = u.getElementByXPath(searchTerm);
+                        if(elements.isEmpty()){
+                            System.out.println("Vide");
+                        }
                         Object[][] newData = new Object[elements.size()][6];
                         for (int i = 0; i < elements.size(); i++) {
-                            Element element = (Element) elements.get(i);
-                            System.out.println("Hey:"+element);
+                            org.jdom2.Element element = elements.get(i);
                             newData[i] = new Object[]{
                                     ((org.jdom2.Element) element).getChildText("nom"),
                                     ((org.jdom2.Element) element).getChildText("description"),
@@ -70,10 +69,10 @@ public class menurestaurant extends JFrame {
                                     new JButton("Supprimer")
                             };
                         }
-                        data = newData;
-                        model.fireTableDataChanged();
+                        model = new MenuTableModel(newData);
+                        table.setModel(model);
                     } catch (Exception ex) {
-                        ex.printStackTrace();
+                        System.out.println(ex.getMessage());
                     }
                 } else if ("XQuery".equals(methodList.getSelectedItem())) {
                     // TODO : Appeler la méthode pour récupérer les éléments avec XQuery

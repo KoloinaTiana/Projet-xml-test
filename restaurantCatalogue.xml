@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <restaurantCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.example.com/restaurantCatalogue file:/C:/Users/Koloina%20Tiana/Documents/Projet%20XML/restaurantCatalogue.xsd"
- xmlns="http://www.example.com/restaurantCatalogue">
+ xsi:schemaLocation="http://www.example.com/restaurantCatalogue file:restaurantCatalogue.xsd">
     
     <plat id="1">
         <nom>Steak de boeuf</nom>
@@ -9,7 +8,7 @@
         <prix>25.99</prix>
         <categorie>Plat principal</categorie>
         <ingredients>
-            <ingredient>Bœuf</ingredient>
+            <ingredient>Boeuf</ingredient>
             <ingredient>Pommes de terre</ingredient>
             <ingredient>Carottes</ingredient>
             <ingredient>Brocoli</ingredient>
@@ -104,7 +103,7 @@
     </plat>
     
     <plat id="8">
-        <nom>Bœuf bourguignon</nom>
+        <nom>Boeuf bourguignon</nom>
         <description>Bœuf mijoté au vin rouge, carottes, oignons et champignons, accompagné de pommes de terre vapeur</description>
         <prix>18.99</prix>
         <categorie>Plat principal</categorie>
