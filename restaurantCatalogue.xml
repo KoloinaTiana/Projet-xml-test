@@ -14,10 +14,11 @@
             <ingredient>Brocoli</ingredient>
             <ingredient>Sauce béarnaise</ingredient>
         </ingredients>
+        <image>./images/steak.jpg</image>
     </plat>
     
     <plat id="2">
-        <nom>Salade César</nom>
+        <nom>Salade Caesar</nom>
         <description>Une salade verte avec du poulet grillé, du parmesan râpé et une sauce césar.</description>
         <prix>12.99</prix>
         <categorie>Entrée</categorie>
@@ -26,8 +27,9 @@
             <ingredient>Poulet grillé</ingredient>
             <ingredient>Tomates cerises</ingredient>
             <ingredient>Croutons</ingredient>
-            <ingredient>Sauce césar</ingredient>
+            <ingredient>Sauce caesar</ingredient>
         </ingredients>
+        <image>./images/salade_caesar.jpg</image>
     </plat>
     
     <plat id="3">
@@ -42,6 +44,7 @@
             <ingredient>Basilic</ingredient>
             <ingredient>Tomates cerises</ingredient>
         </ingredients>
+        <image>./images/pizza.jpg</image>
     </plat>
     
     <plat id="4">
@@ -56,6 +59,7 @@
             <ingredient>Bouillon de légumes</ingredient>
             <ingredient>Herbes de Provence</ingredient>
         </ingredients>
+        <image>./images/soupe.jpg</image>
     </plat>
     
     <plat id="5">
@@ -69,6 +73,7 @@
             <ingredient>Épices Tandoori</ingredient>
             <ingredient>Riz basmati</ingredient>
         </ingredients>
+        <image>./images/poulet_tandoori.jpg</image>
     </plat>
     
     <plat id="6">
@@ -84,6 +89,7 @@
             <ingredient>Sauce tomate maison</ingredient>
             <ingredient>Fromage gratiné</ingredient>
         </ingredients>
+        <image>./images/lasagne.jpg</image>
     </plat>
     
     <plat id="7">
@@ -100,6 +106,7 @@
             <ingredient>Poivrons</ingredient>
             <ingredient>Olives</ingredient>
         </ingredients>
+        <image>./images/salade_nicoise.jpg</image>
     </plat>
     
     <plat id="8">
@@ -115,20 +122,23 @@
             <ingredient>Champignons</ingredient>
             <ingredient>Pommes de terre</ingredient>
         </ingredients>
+        <image>./images/boeuf_bourguignon.jpg</image>
     </plat>
     
     <plat id="9">
-        <nom>Moules marinières</nom>
-        <description>Moules cuites dans un bouillon de vin blanc, échalotes et persil, accompagnées de frites maison</description>
-        <prix>15.99</prix>
+        <nom>Côte de boeuf</nom>
+        <description>Une côte de boeuf grillée à point avec des herbes de Provence et accompagnée de frites maison.</description>
+        <prix>35.99</prix>
         <categorie>Plat principal</categorie>
         <ingredients>
-            <ingredient>Moules</ingredient>
-            <ingredient>Vin blanc</ingredient>
-            <ingredient>Échalotes</ingredient>
-            <ingredient>Persil</ingredient>
+            <ingredient>Boeuf</ingredient>
             <ingredient>Pommes de terre</ingredient>
+            <ingredient>Huile d'olive</ingredient>
+            <ingredient>Herbes de Provence</ingredient>
+            <ingredient>Sel</ingredient>
+            <ingredient>Poivre</ingredient>
         </ingredients>
+        <image>./images/cote.jpg</image>
     </plat>
     
     <plat id="10">
@@ -144,6 +154,7 @@
             <ingredient>Citron vert</ingredient>
             <ingredient>Sauce aigre-douce</ingredient>
         </ingredients>
+        <image>./images/pad.jpg</image>
     </plat>
     
     <plat id="11">
@@ -158,6 +169,7 @@
             <ingredient>Persil</ingredient>
             <ingredient>Beurre</ingredient>
         </ingredients>
+        <image>./images/moules.jpg</image>
     </plat>
     
     <plat id="12">
@@ -173,6 +185,7 @@
             <ingredient>Parmesan</ingredient>
             <ingredient>Crème fraîche</ingredient>
         </ingredients>
+        <image>./images/risotto.jpg</image>
     </plat>
     
     <plat id="13">
@@ -186,6 +199,7 @@
             <ingredient>Wasabi</ingredient>
             <ingredient>Gingembre mariné</ingredient>
         </ingredients>
+        <image>./images/sashimi.jpg</image>
     </plat>
     
     <plat id="14">
@@ -202,6 +216,7 @@
             <ingredient>Tomate</ingredient>
             <ingredient>Salade verte</ingredient>
         </ingredients>
+        <image>./images/escalope.jpg</image>
     </plat>
     
     <plat id="15">
@@ -217,6 +232,7 @@
             <ingredient>Yaourt</ingredient>
             <ingredient>Lait de coco</ingredient>
         </ingredients>
+        <image>./images/smoothie.jpg</image>
     </plat>
     
     <plat id="16">
@@ -231,6 +247,7 @@
             <ingredient>Sucre</ingredient>
             <ingredient>Glaçons</ingredient>
         </ingredients>
+        <image>./images/the.jpg</image>
     </plat>
     
     <plat id="17">
@@ -245,6 +262,7 @@
             <ingredient>Sucre</ingredient>
             <ingredient>Chantilly</ingredient>
         </ingredients>
+        <image>./images/lait_fraises.jpg</image>
     </plat>
     
     <plat id="18">
@@ -259,6 +277,7 @@
             <ingredient>Jus de citron</ingredient>
             <ingredient>Extrait de vanille</ingredient>
         </ingredients>
+        <image>./images/grenadine.jpg</image>
     </plat>
     
     <plat id="19">
@@ -273,6 +292,7 @@
             <ingredient>Sucre</ingredient>
             <ingredient>Chantilly</ingredient>
         </ingredients>
+        <image>./images/cafe.jpg</image>
     </plat>
     
     <plat id="20">
@@ -287,6 +307,7 @@
             <ingredient>Crème fouettée</ingredient>
             <ingredient>Sel</ingredient>
         </ingredients>
+        <image>./images/mousse.jpg</image>
     </plat>
     
     <plat id="21">
@@ -301,6 +322,7 @@
             <ingredient>Gélatine</ingredient>
             <ingredient>Extrait de vanille</ingredient>
         </ingredients>
+        <image>./images/panna.jpg</image>
     </plat>
     
     <plat id="22">
@@ -315,6 +337,7 @@
             <ingredient>Sucre</ingredient>
             <ingredient>Beurre</ingredient>
         </ingredients>
+        <image>./images/tarte.jpg</image>
     </plat>
     
     <plat id="23">
@@ -329,6 +352,7 @@
             <ingredient>Sucre</ingredient>
             <ingredient>Beurre</ingredient>
         </ingredients>
+        <image>./images/cheescake.jpg</image>
     </plat>
     
     <plat id="24">
@@ -343,6 +367,7 @@
             <ingredient>Beurre</ingredient>
             <ingredient>Cannelle</ingredient>
         </ingredients>
+        <image>./images/crumble.jpg</image>
     </plat>
     
 </restaurantCatalogue>

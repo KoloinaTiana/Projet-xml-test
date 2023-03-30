@@ -3,7 +3,12 @@
         "include": [
             "lib/**/*.jar",
             "jdom-2.0.6.1.jar",
-            "jaxen-2.0.0.jar"
+            "jaxen-2.0.0.jar",
+            "saxon9-9.1.0.8.jar",
+            "saxon-s9api-9.1.0.8b.jar",
+            "Saxon-HE-12.1.jar",
+            "saxon-he-12.1.jar",
+            "saxon-he-xqj-12.1.jar"
         ],
         "exclude": [
             "commons-collections4-4.4.jar"

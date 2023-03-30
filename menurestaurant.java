@@ -13,6 +13,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import net.sf.saxon.s9api.Axis;
+import net.sf.saxon.s9api.QName;
+import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.XdmSequenceIterator;
+
 public class menurestaurant extends JFrame {
 
     private JTable table;
@@ -60,12 +65,18 @@ public class menurestaurant extends JFrame {
                         Object[][] newData = new Object[elements.size()][6];
                         for (int i = 0; i < elements.size(); i++) {
                             org.jdom2.Element element = elements.get(i);
+                            List<String> ingredientsList = new ArrayList<>();
+                            List<org.jdom2.Element> ingredients = element.getChildren("ingredients").get(0).getChildren("ingredient");
+                            for (org.jdom2.Element ingredient : ingredients) {
+                                ingredientsList.add(ingredient.getText());
+                            }
+                            String ingredientsString = String.join(",", ingredientsList);
                             newData[i] = new Object[]{
                                     ((org.jdom2.Element) element).getChildText("nom"),
                                     ((org.jdom2.Element) element).getChildText("description"),
                                     ((org.jdom2.Element) element).getChildText("prix"),
                                     ((org.jdom2.Element) element).getChildText("categorie"),
-                                    ((org.jdom2.Element) element).getChildText("ingredients"),
+                                    ingredientsString,
                                     new JButton("Supprimer")
                             };
                         }
@@ -75,8 +86,67 @@ public class menurestaurant extends JFrame {
                         System.out.println(ex.getMessage());
                     }
                 } else if ("XQuery".equals(methodList.getSelectedItem())) {
-                    // TODO : Appeler la méthode pour récupérer les éléments avec XQuery
+                    try {
+                        String nomValue = "", prixValue ="", descValue="", catValue="", ingValue="";
+                        XmlUtils u = new XmlUtils();
+                        List<XdmNode> elements = u.getElementByXQuery(searchTerm);
+                        if (elements.isEmpty()) {
+                            System.out.println("Vide");
+                        } else {
+                            Object[][] newData = new Object[elements.size()][6];
+                            for (int i = 0; i < elements.size(); i++) {
+                                XdmNode element = elements.get(i);
+                                XdmSequenceIterator childrenNom = element.axisIterator(Axis.CHILD, new QName("nom"));
+                                while (childrenNom.hasNext()) {
+                                    XdmNode child = (XdmNode) childrenNom.next();
+                                    nomValue = child.getStringValue();
+                                    System.out.println(nomValue);
+                                }
+                                XdmSequenceIterator childrenDesc = element.axisIterator(Axis.CHILD, new QName("description"));
+                                while (childrenDesc.hasNext()) {
+                                    XdmNode child = (XdmNode) childrenDesc.next();
+                                    descValue = child.getStringValue();
+                                    System.out.println(descValue);
+                                }
+
+                                XdmSequenceIterator childrenPrix = element.axisIterator(Axis.CHILD, new QName("prix"));
+                                while (childrenPrix.hasNext()) {
+                                    XdmNode child = (XdmNode) childrenPrix.next();
+                                    prixValue = child.getStringValue();
+                                    System.out.println(prixValue);
+                                }
+
+                                XdmSequenceIterator childrencat = element.axisIterator(Axis.CHILD, new QName("categorie"));
+                                while (childrencat.hasNext()) {
+                                    XdmNode child = (XdmNode) childrencat.next();
+                                    catValue = child.getStringValue();
+                                    System.out.println(catValue);
+                                }
+
+                                XdmSequenceIterator childrening = element.axisIterator(Axis.CHILD, new QName("ingredients"));
+                                while (childrening.hasNext()) {
+                                    XdmNode child = (XdmNode) childrening.next();
+                                    ingValue = child.getStringValue();
+                                    System.out.println(catValue);
+                                }
+
+                                newData[i] = new Object[]{
+                                    nomValue,
+                                    descValue,
+                                    prixValue,
+                                    catValue,
+                                    ingValue,
+                                    new JButton("Supprimer")
+                                };
+                            }
+                            model = new MenuTableModel(newData);
+                            table.setModel(model);
+                        }
+                    } catch (Exception ex) {
+                        System.out.println(ex.getMessage());
+                    }
                 }
+                
             }
         });
 
@@ -102,16 +172,20 @@ public class menurestaurant extends JFrame {
 
         //ajouter un texte et une liste déroulante pour le choix du format de sortie
         JPanel exportPanel = new JPanel();
-        JLabel exportLabel = new JLabel("Exporter le résultat en :");
+        JLabel exportLabel = new JLabel("Exporter le fichier en :");
         exportPanel.add(exportLabel);
 
-        String[] formats = {"HTML", "PDF"};
+        String[] formats = {"HTML"};
         JComboBox<String> formatList = new JComboBox<>(formats);
         exportPanel.add(formatList);
 
         //ajouter un bouton pour l'exportation
         JButton exportButton = new JButton("Exporter");
         exportPanel.add(exportButton);
+        exportButton.addActionListener(e -> {
+            XmlUtils u = new XmlUtils();
+            u.TransformXMLtoHTML();
+        });
 
         // Ajouter la partie d'exportation à la partie inférieure du JPanel principal
         panel.add(exportPanel, BorderLayout.SOUTH);
