@@ -6,9 +6,6 @@
             "jaxen-2.0.0.jar",
             "saxon9-9.1.0.8.jar",
             "saxon-s9api-9.1.0.8b.jar",
-            "Saxon-HE-12.1.jar",
-            "saxon-he-12.1.jar",
-            "saxon-he-xqj-12.1.jar",
             "saxon9-dom-9.1.0.8.jar",
             "commons-io-0.1.jar"
         ],
