@@ -1,17 +1,23 @@
 import javax.swing.*;
 import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import net.sf.saxon.s9api.Axis;
 import net.sf.saxon.s9api.QName;
@@ -82,6 +88,10 @@ public class menurestaurant extends JFrame {
                         }
                         model = new MenuTableModel(newData);
                         table.setModel(model);
+                        // Ajouter le Renderer personnalisé à la colonne "Action" de votre table
+                        TableColumnModel columnModel = table.getColumnModel();
+                        columnModel.getColumn(5).setCellRenderer(new ButtonRenderer());
+                        columnModel.getColumn(5).setCellEditor(new ButtonEditor(new JCheckBox()));
                     } catch (Exception ex) {
                         System.out.println(ex.getMessage());
                     }
@@ -141,6 +151,10 @@ public class menurestaurant extends JFrame {
                             }
                             model = new MenuTableModel(newData);
                             table.setModel(model);
+                            // Ajouter le Renderer personnalisé à la colonne "Action" de votre table
+                            TableColumnModel columnModel = table.getColumnModel();
+                            columnModel.getColumn(5).setCellRenderer(new ButtonRenderer());
+                            columnModel.getColumn(5).setCellEditor(new ButtonEditor(new JCheckBox()));
                         }
                     } catch (Exception ex) {
                         System.out.println(ex.getMessage());
@@ -172,12 +186,8 @@ public class menurestaurant extends JFrame {
 
         //ajouter un texte et une liste déroulante pour le choix du format de sortie
         JPanel exportPanel = new JPanel();
-        JLabel exportLabel = new JLabel("Exporter le fichier en :");
+        JLabel exportLabel = new JLabel("Exporter le fichier en HTML : ");
         exportPanel.add(exportLabel);
-
-        String[] formats = {"HTML"};
-        JComboBox<String> formatList = new JComboBox<>(formats);
-        exportPanel.add(formatList);
 
         //ajouter un bouton pour l'exportation
         JButton exportButton = new JButton("Exporter");
@@ -185,7 +195,17 @@ public class menurestaurant extends JFrame {
         exportButton.addActionListener(e -> {
             XmlUtils u = new XmlUtils();
             u.TransformXMLtoHTML();
+
         });
+
+        JButton addButton = new JButton("Ajouter plat");
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                newplat newFrame = new newplat();
+                newFrame.setVisible(true);
+            }
+        });
+        exportPanel.add(addButton);
 
         // Ajouter la partie d'exportation à la partie inférieure du JPanel principal
         panel.add(exportPanel, BorderLayout.SOUTH);
@@ -196,6 +216,7 @@ public class menurestaurant extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
+        
     }
 
     private Object[][] loadCatalogueData() {
@@ -289,6 +310,7 @@ public class menurestaurant extends JFrame {
         private String label;
         private boolean isPushed;
         private int row;
+        Document xmlDocument = null;
     
         public ButtonEditor(JCheckBox checkBox) {
             super(checkBox);
@@ -314,8 +336,8 @@ public class menurestaurant extends JFrame {
             }
             label = (value == null) ? "" : value.toString();
             button.setText("Supprimer");
-            isPushed = true;
             this.row = row;
+            isPushed = true;
             return button;
         }
     
@@ -323,10 +345,36 @@ public class menurestaurant extends JFrame {
         public Object getCellEditorValue() {
             if (isPushed) {
                 // Action à réaliser lors du clic sur le bouton
-                System.out.println("Button clicked for row " + row);
+                File xmlFile = new File("restaurantCatalogue.xml");
+                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder builder;
+                try {
+                    builder = factory.newDocumentBuilder();
+                    xmlDocument = builder.parse(xmlFile);
+                } catch (ParserConfigurationException | IOException e1) {
+                    e1.printStackTrace();
+                } catch (SAXException e1) {
+                    e1.printStackTrace();
+                }
+        
+                // extraire l'élément XML correspondant à cette ligne
+                Element element = (Element) xmlDocument.getElementsByTagName("plat").item(row);
+                            
+                // supprimer l'élément XML
+                 element.getParentNode().removeChild(element);
+                            
+                // mettre à jour la table et le document XML
+                model.supprimerLigne(row);
+                modifyXml m = new modifyXml();
+                try {
+                     m.saveXMLDocument(xmlDocument, xmlFile);
+                } catch (TransformerException e1) {
+                     e1.printStackTrace();
+                }
             }
             isPushed = false;
             return new String(label);
         }
     }
+    
 }

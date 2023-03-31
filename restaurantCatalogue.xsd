@@ -30,6 +30,7 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
+                            <xs:element name="image" type="xs:string"/>
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
                     </xs:complexType>

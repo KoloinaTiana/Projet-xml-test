@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<restaurantCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.example.com/restaurantCatalogue file:restaurantCatalogue.xsd">
+<?xml version="1.0" encoding="UTF-8"?><restaurantCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/restaurantCatalogue file:restaurantCatalogue.xsd">
     
     <plat id="1">
         <nom>Steak de boeuf</nom>
@@ -352,7 +350,7 @@
             <ingredient>Sucre</ingredient>
             <ingredient>Beurre</ingredient>
         </ingredients>
-        <image>./images/cheescake.jpg</image>
+        <image>./images/cheesecake.jpg</image>
     </plat>
     
     <plat id="24">
@@ -370,5 +368,5 @@
         <image>./images/crumble.jpg</image>
     </plat>
     
+   
 </restaurantCatalogue>
-
